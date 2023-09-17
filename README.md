@@ -19,7 +19,10 @@ It's the of the size voice recognition model that you are using, the bigger the 
 <h2>Checklist</h2>
 1- Remove the annoyment by putting it in the place of the model size
 The ISSUE: GUI isn't Updating properly which makes it ignore requests to change the text
-Possible Fix: Multithreading <br>
-2-realistic Voices <br>
-3-Foreign language support. <br>
+Possible Fix: Multi-Threading <br>
+2- Add scrolling.<br>
+ISSUE: When messages go below the windows size you can't see the new messages
+Possible Fix: Remake the UI (With Multi-threading to fix issue number 1)
+3-realistic Voices <br>
+4-Foreign language support. <br>
 How: by adding translating layers.
