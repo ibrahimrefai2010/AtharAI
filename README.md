@@ -2,10 +2,11 @@
 Athar AI is a speaking version of ChatGPT.
 
 <h2> How to use: </h2>
-1- Fire up Main.py <br>
-2- when your time to talk a microphone icon will pop on the taskbar <br>
+1- Fill in the variables in pre.py <br>
+2- Fire up Main.py <br>
+3- when your time to talk a microphone icon will pop on the taskbar <br>
 <b>BONUS</b>-  and if you are on mac or Linux you can speak when console tells you to, the annoyment will be removed as soon as possible, so this is just a temporary solution. <br>
-3- After you speak Athar will respond.
+4- After you speak Athar will respond.
 
 <h1>Prerequisites</h1>
 1- ffmpeg. you can download it via chocolatey <br>
@@ -17,11 +18,11 @@ Athar AI is a speaking version of ChatGPT.
 It's the of the size voice recognition model that you are using, the bigger the better, but you will need more RAM to run the bigger model, so the program will auto-choose a model for you based on how much <b>free</b> memory you have (it will be replaced remove the annoyment we talked about earlier)
 
 <h2>Checklist</h2>
-1- Remove the annoyment by putting it in the place of the model size
-The ISSUE: GUI isn't Updating properly which makes it ignore requests to change the text
+1- Remove the annoyment by putting it in the place of the model size <br>
+The ISSUE: GUI isn't Updating properly which makes it ignore requests to change the text <br>
 Possible Fix: Multi-Threading <br>
 2- Add scrolling.<br>
-ISSUE: When messages go below the windows size you can't see the new messages
+ISSUE: When messages go below the windows size you can't see the new messages <br>
 Possible Fix: Remake the UI (With Multi-threading to fix issue number 1) <br>
 3-realistic Voices <br>
 4-Foreign language support. <br>
