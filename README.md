@@ -22,7 +22,7 @@ The ISSUE: GUI isn't Updating properly which makes it ignore requests to change 
 Possible Fix: Multi-Threading <br>
 2- Add scrolling.<br>
 ISSUE: When messages go below the windows size you can't see the new messages
-Possible Fix: Remake the UI (With Multi-threading to fix issue number 1)
+Possible Fix: Remake the UI (With Multi-threading to fix issue number 1) <br>
 3-realistic Voices <br>
 4-Foreign language support. <br>
 How: by adding translating layers.
