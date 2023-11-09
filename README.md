@@ -9,7 +9,9 @@ Athar AI is a speaking version of ChatGPT.
 4- After you speak Athar will respond.
 
 <h1>Prerequisites</h1>
-1- ffmpeg. you can download it via chocolatey <br>
+1- ffmpeg. you can download it via chocolatey. <br>
+2. You need to have to Git installed on your machine. <br>
+3- An OpenAI key. <br>
 2- run the following command: <br>
 <code>pip install git+https://github.com/openai/whisper.git  && pip install psutil && pip install SpeechRecognition && pip install pyaudio && pip install openai && pip install pyttsx3 && pip install customtkinter</code>
 
