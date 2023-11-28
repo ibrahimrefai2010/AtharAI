@@ -8,13 +8,13 @@ Athar AI is a speaking version of ChatGPT.
 <b>BONUS</b>-  and if you are on mac or Linux you can speak when console tells you to, the annoyment will be removed as soon as possible, so this is just a temporary solution. <br>
 4- After you speak Athar will respond.
 
-<h1>Prerequisites</h1>
-1- ffmpeg. you can download it via chocolatey. <br>
+<h1>How to install</h1>
+1- ffmpeg, you can download it via chocolatey. <br>
 2. You need to have to Git installed on your machine. <br>
 3- An OpenAI key. <br>
 4- Python 3.11 or lower (3.12 isn't supported because of numba)
-2- run the following command: <br>
-<code>pip install git+https://github.com/openai/whisper.git  && pip install psutil && pip install SpeechRecognition && pip install pyaudio && pip install openai && pip install pyttsx3 && pip install customtkinter && pip install pvcheetah</code>
+5- run the following command: <br>
+<code>pip install git+https://github.com/openai/whisper.git  && pip install psutil && pip install SpeechRecognition && pip install pyaudio && pip install openai && pip install pyttsx3 && pip install customtkinter && pip install pvcheetah && pip install PySide2</code>
 
 
 <h2>What is Medium.en , small.en, etc?</h2>
