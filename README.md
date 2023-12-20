@@ -11,8 +11,8 @@ Athar AI is a speaking version of ChatGPT.
 <h1>How to install</h1>
 1- ffmpeg, you can download it via chocolatey. <br>
 2. You need to have to Git installed on your machine. <br>
-3- An OpenAI key. <br>
-4- Python 3.11 or lower (3.12 isn't supported because of numba)
+3- You need to have An OpenAI key. <br>
+4- Python 3.11 or lower (3.12 isn't supported because of numba) <br>
 5- Run the following command: <br>
 <code>pip install git+https://github.com/openai/whisper.git  && pip install psutil && pip install SpeechRecognition && pip install pyaudio && pip install openai && pip install pyttsx3 && pip install customtkinter && pip install pvcheetah && pip install PySide2</code> <br>
 6- Run the following command to assign your OpenAI key: <br>
