@@ -8,7 +8,7 @@ import pre
 AIName = ("Athar")
 PersonName = pre.FULL_NAME
 
-ChatBot.initializeAI(pre.OPENAI_API_KEY)
+ChatBot.initializeAI()
 
 Chatbot_output = ChatBot.sendMessageToAI("Hello, my name is " + PersonName).replace("Chatgpt", AIName).replace("ChatGPT", AIName)
 UI.Send(Chatbot_output)

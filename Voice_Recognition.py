@@ -21,7 +21,7 @@ def Input_user():
 
     
             # write audio
-            with open("recorded.wav", "wb") as f:
+            with open("C:\\Users\\abura\\Programming\\AtharAI-main\\recorded.wav", "wb") as f:
                 f.write(audio.get_wav_data())
  
     main()
@@ -40,8 +40,8 @@ def Input_user():
         best_model = "tiny.en"
 
 
-    model = whisper.load_model(best_model)
+    model = whisper.load_model("medium.en")
     
-    result = model.transcribe("recorded.wav")
+    result = model.transcribe("C:\\Users\\abura\\Programming\\AtharAI-main\\recorded.wav")
 
     return result["text"]
