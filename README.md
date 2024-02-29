@@ -1,5 +1,5 @@
 <h1> What Is It? </h1>
-Athar AI is a speaking version of ChatGPT.
+It's Jarvis Except that it's Real 🤖.
 
 <h2> How to use: </h2>
 1- Fill in the variables in pre.py <br>
