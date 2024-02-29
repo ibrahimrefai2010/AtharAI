@@ -9,7 +9,7 @@ It's Jarvis Except that it's Real 🤖.
 4- After you speak Athar will respond.
 
 <h1>How to install</h1>
-1- ffmpeg, you can download it via chocolatey. <br>
+1- Download ffmpeg, you can download it via chocolatey. <br>
 2. You need to have to Git installed on your machine. <br>
 3- An OpenAI key. <br>
 4- Python 3.11 or lower (3.12 isn't supported because of numba)
