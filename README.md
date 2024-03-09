@@ -18,10 +18,10 @@ It's Jarvis Except that it's Real 🤖.
 
 
 <h2>What is Medium.en , small.en, etc?</h2>
-It's the of the size voice recognition model that you are using, the bigger the better, but you will need more RAM to run the bigger model, so the program will auto-choose a model for you based on how much <b>free</b> memory you have (it will be replaced remove the annoyment we talked about earlier)
+It's the of the size voice recognition model that you are using, the bigger the better, but you will need more RAM to run the bigger model, so the program will auto-choose a model for you based on how much <b>free</b> memory you have (it will be replaced to remove the annoyment aforementioned)
 
 <h2>Checklist</h2>
-1- Remove the annoyment by putting it in the place of the model size <br>
+1- Remove the annoyment aforementioned by putting it in the place of the model size <br>
 The ISSUE: GUI isn't Updating properly which makes it ignore requests to change the text <br>
 Possible Fix: Multi-Threading <br>
 2- Add scrolling.<br>
