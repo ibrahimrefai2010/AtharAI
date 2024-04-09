@@ -2,46 +2,35 @@ def Input_user():
     import speech_recognition as sr
     import whisper
     import os
-    import psutil
-    import GUI as UI
     import time
+    import app
     time.sleep(0.5)
     def main():
+        app.SetSpeaker('user') #Sets the mic icon, so it indicates that the user should talk now
         print("Speak")
         r = sr.Recognizer()
     
-        with sr.Microphone() as source:
+        with sr.Microphone() as source: #recordes whatthe user said and saves it to recorded.wav, when the user finishes talking it automatically saves the data from RAM to the disk, for the next step
             
 
             r.adjust_for_ambient_noise(source)
     
             audio = r.listen(source)
-    
+            app.SetSpeaker('Athar')
             print("Recognizing Now .... ")
 
     
             # write audio
-            with open("C:\\Users\\abura\\Programming\\AtharAI-main\\recorded.wav", "wb") as f:
+            with open("recorded.wav", "wb") as f:
                 f.write(audio.get_wav_data())
  
     main()
     
-    free_mem = psutil.virtual_memory().free / 1073741824
-
-    if(free_mem > 10):
-        best_model = "large"
-    elif(free_mem > 5):
-        best_model = "medium.en"
-    elif(free_mem > 2):
-        best_model = "small.en"
-    elif(free_mem > 1):
-        best_model = "base.en"
-    elif(free_mem > 0):
-        best_model = "tiny.en"
 
 
-    model = whisper.load_model("medium.en")
+
+    model = whisper.load_model("medium.en") #uses the openAI whisper model to recognize turn what the user said into text, for the model to reply
     
-    result = model.transcribe("C:\\Users\\abura\\Programming\\AtharAI-main\\recorded.wav")
+    result = model.transcribe("recorded.wav")
 
     return result["text"]

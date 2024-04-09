@@ -1,0 +1,78 @@
+body{
+    background-color: #101010;
+    font-family: sans-serif;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login form .form-group{
+    flex-direction: column;
+    display: flex;
+}
+.login form .form-group input {
+    color: #ffff;
+    background-color: transparent;
+    border: 0px;
+    text-align: center;
+
+}
+
+.login form .form-group hr {
+    background: #4E4E4E;
+    border: 1px solid #4E4E4E;
+    width: 150px;
+}
+
+
+.login form .form-group input:focus-visible{
+    border: 0px;
+    outline: 0px;
+}
+
+.login form .form-group input:focus{
+    border: 0px;
+}
+
+.login form .form-group input:focus-within
+{
+    border: 0px;
+}
+
+.login form .form-group input::placeholder{
+    color: #4E4E4E;
+}
+.login form .form-group label {
+    color: #ffff;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.login form .form-group button {
+    margin-top: 16px;
+    border-radius: 10px;
+    padding: 8px 0px;
+    transition: 0.4s;
+    border: 0px;
+    width: 150px;
+    margin-top: 10px;
+    margin: auto;
+    background-color: #EB5E28;
+    color: black;
+}
+
+.login form .form-group button:hover {
+    color: white;
+    background-color: #4E4E4E;
+}
+
+#Name_label {
+    font-size: 60px;
+    margin-bottom: 30px;
+}

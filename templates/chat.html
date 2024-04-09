@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/chat.css') }}">
+        <title>AtharAI</title>
+    </head>
+    <body>
+
+        <header>
+            <div class="title">
+                AtharAI
+            </div>
+            <!--
+            <div class="right-content">
+                <div class="gpt">
+                
+                    <span class="custom-dropdown custom-dropdown--tomato">
+                        <select class="custom-dropdown__select custom-dropdown__select--tomato">
+                            <option> Gemini Pro</option>
+                            <option> GPT-4 Turbo</option>
+                        </select>
+                    </span>
+                </div>
+            -->
+            </div>
+
+
+        </header>
+
+        <div class="chat" id="chat">
+          
+        </div>
+
+        <div class="microphone">
+            <button id="mic-background">
+                <img id="Speaker_Image" src="{{ url_for('static', filename='assets/mic.png') }}" alt=""/>
+            </button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    </body>
+</html>

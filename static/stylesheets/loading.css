@@ -1,0 +1,41 @@
+body{
+    background-color: #101010;
+    color: white;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.loader .counter p{
+    font-size: 40px;
+    font-weight: 100;
+    color: #ff7200;
+}
+
+.loader .counter h1{
+    color: white;
+    font-size: 60px;
+    line-height: 0px;
+}
+
+.loader .counter hr{
+    background: #f60d54;
+    border: none;
+    height: 2px;
+}
+
+.loader .counter h1.abs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .loader .counter .color {
+    width: 0px;
+    overflow: hidden;
+    color: #ff7200;
+  }

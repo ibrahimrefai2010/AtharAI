@@ -1,18 +1,24 @@
-import openai 
-import pre
+import GPT
+import Gemini
+import queue
+def initializeAI(model, name): #initializes the model based on the prefered model chosen by the user in pre.py
+    global AI
+    global AIName
+    AIName = name
+    AI = model
+    if AI == "gpt":
+        GPT.initializeAI()
+    elif AI == "gemini":
+        Gemini.initializeAI()
+    else:
+        raise "AI unknown in Chatbot.initializeAI"
 
-def initializeAI():
-	openai.api_key = pre.OPENAI_API_KEY
-	global messages
-	messages = [ {"role": "system", "content": 
-				"You are a intelligent assistant."} ] 
-
-
-def sendMessageToAI(message):
-	messages.append({"role": "user", "content": message}) 
-	chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages) 
-	reply = chat.choices[0].message.content 
-	print(f"{reply}") 
-	messages.append({"role": "assistant", "content": reply}) 
-	return (f"{reply}")
- 
+def sendMessage(message): #sends a message to the model based on the prefered model chosen by the user in pre.py
+    returned_message = ""
+    if AI == "gpt":
+        returned_message = GPT.sendMessage(message)
+    elif AI == "gemini":
+        returned_message = Gemini.sendMessage(message)
+    else:
+        raise "AI unknown in Chatbot.sendMessageToAI"
+    return returned_message.replace("Chatgpt", AIName).replace("ChatGPT", AIName).replace("[your_name]", AIName).replace("Gemini", AIName).replace("Google", "Ibrahim Refai and faisal alshamrany").replace("OpenAI", "Ibrahim Refai and faisal alshamrany")
