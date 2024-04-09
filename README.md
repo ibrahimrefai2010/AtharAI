@@ -5,9 +5,9 @@ It's the first voice assistant that uses LLMs as it's underlying technology, LLM
 our competitors like siri and google assistant use a hardcoded method which makes the voice assistant dumb, but AtharAI is not like them because it's using Machine learning which makes it miles ahead of it's competition.
 
 <h1>How to install</h1>
-1- Create a python 3.10 Virtual enviroment and activate it.
-2- Dowload ffmpeg using <code>winget install ffmpeg</code>
-3- download these python modules: pip install -q -U psutil SpeechRecognition pyaudio openai==0.28 pyttsx3 flask waitress google-generativeai openai-whisper
+1- Create a python 3.10 Virtual enviroment and activate it. <br>
+2- Dowload ffmpeg using <code>winget install ffmpeg</code> <br>
+3- download the needed python modules:<br> <code>pip install -q -U psutil SpeechRecognition pyaudio openai==0.28 pyttsx3 flask waitress google-generativeai openai-whisper</code> <br>
 
 <h1> How to use: </h1>
 Fire up Main.py and that's it.
