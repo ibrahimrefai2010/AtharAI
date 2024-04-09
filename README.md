@@ -29,4 +29,10 @@ ISSUE: When messages go below the windows size you can't see the new messages <b
 Possible Fix: Remake the UI (With Multi-threading to fix issue number 1) <br>
 3-realistic Voices <br>
 4-Foreign language support. <br>
-How: by adding translating layers.
+How: by adding translating layers.<br>
+
+<h1>AtharAI V2.0 is in it's final stages and is coming soon, what's new:</h1>
+it now uses HTML, CSS, JS as it's GUI instead of tkinter. <br>
+Much simpler installation process <br>
+Now uses GPT-4-Turbo or Gemini 1.0 pro preferably, instead of GPT-3.5-Turbo. <br>
+All known bugs in AtharAI V1 resolved <br>
