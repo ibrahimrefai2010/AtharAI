@@ -3,15 +3,10 @@ It's the first voice assistant that uses LLMs as it's underlying technology, LLM
 our competitors like siri and google assistant use a hardcoded method which makes the voice assistant dumb, but AtharAI is not like them because it's using Machine learning which makes it miles ahead of it's competition.
 
 <h1>How to install</h1>
-Uninstall your existing python installation <br>
-Run <code>installer.bat</code> and it will install every thing, including python 3.10, and you'll be good to go.<br>
-CAUTION: DO NOT Run <code>installer.bat</code> in vscode or any ide, instead run it directly from file explorer
+Create a python 3.10 Vritual enviroment and activate it, and then run <code>installer.bat</code>
 
 <h1> How to use: </h1>
 Fire up Main.py and that's it.
-
-2- once activated you run the app by running <code>Main.py</code>: <br>
-<code>python Main.py</code>
 
 <h2>How to switch models</h2>
 AtharAI supports both Gemini 1.0 pro by Google, or GPT-4-Turbo by OpenAI, GPT-4-Turbo is more powerful, but AtharAI uses Gemini-1.0-pro by default, here's how you can switch: <br>
