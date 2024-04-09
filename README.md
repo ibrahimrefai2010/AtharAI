@@ -5,7 +5,7 @@ It's the first voice assistant that uses LLMs as it's underlying technology, LLM
 our competitors like siri and google assistant use a hardcoded method which makes the voice assistant dumb, but AtharAI is not like them because it's using Machine learning which makes it miles ahead of it's competition.
 
 <h1>How to install</h1>
-Create a python 3.10 Vritual enviroment and activate it, and then run <code>installer.bat</code>
+Create a python 3.10 Virtual enviroment and activate it, and then run <code>installer.bat</code>
 
 <h1> How to use: </h1>
 Fire up Main.py and that's it.
