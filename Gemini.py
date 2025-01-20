@@ -46,11 +46,3 @@ def sendMessage(message): ##adds a new message to the conversation object, and f
 	convo.send_message(message)
 	processed_response = convo.last.text
 	return processed_response
-
-
-
-
-
-
-
-

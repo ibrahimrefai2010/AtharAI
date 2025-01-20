@@ -13,7 +13,7 @@ function SendChatbotMessage(message) { //a method used for rendering a new messa
         </div>
       </div>
       `;
-      chatElement.innerHTML += htmlCode.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');;
+      chatElement.innerHTML += htmlCode.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
     } else {
       console.error("Chat element with ID 'chat' not found!");
     }

@@ -33,10 +33,6 @@ def SetPersonName(name):
     print(f"app:{FULL_NAME}")
     return ''
 
-@app.route('/loading') #creates the name page in "/loading" URL
-def loading_page():
-    return render_template("loading.html")
-
 
 @app.route("/chat") #creates the name page in "/loading" URL and gives clearance to main.py to start the mainloop
 def chat_page():
@@ -51,7 +47,7 @@ def GetLatestMessage():
         return 'empty'
 
 
-@app.route('/GetSpeaker', methods=['POST']) #a route used by the Frontend to check what is the the currect speaker, 'ath' means that athar is now talking, 'user' means that the user is now talking
+@app.route('/GetSpeaker', methods=['POST']) #a route used by the Frontend to check who's speaking currently, 'ath' means that athar is now talking, 'user' means that the user is now talking
 def GetSpeaker():
     try:
         currently_speakingJSON = {'speaker': currently_speaking}
