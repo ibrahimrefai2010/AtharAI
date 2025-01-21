@@ -2,7 +2,7 @@ from gtts import gTTS
 from io import BytesIO
 from pygame import mixer
 
-def speak(text):
+def Say(text):
     try:
         mp3_fp = BytesIO()
         
@@ -21,5 +21,3 @@ def speak(text):
 
     except Exception as e:
         print(f"Error during text-to-speech: {e}")
-
-speak("Hello, world!")
