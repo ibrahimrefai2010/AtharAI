@@ -21,4 +21,11 @@ def sendMessage(message): #sends a message to the model based on the prefered mo
         returned_message = Gemini.sendMessage(message)
     else:
         raise "AI unknown in Chatbot.sendMessageToAI"
+    
+    proccesed_message = ''
+
+    for i in returned_message:
+        if i != '*':
+            proccesed_message.append(i)
+
     return returned_message.replace("Chatgpt", AIName).replace("ChatGPT", AIName).replace("[your_name]", AIName).replace("Gemini", AIName).replace("Google", "Ibrahim Refai").replace("OpenAI", "Ibrahim Refai")
