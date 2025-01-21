@@ -29,7 +29,7 @@ def Input_user():
 
 
 
-    model = whisper.load_model("medium.en") #uses the openAI whisper model to recognize turn what the user said into text, for the model to reply
+    model = whisper.load_model("small.en") #uses the openAI whisper model to recognize turn what the user said into text, for the model to reply
     
     result = model.transcribe("recorded.wav")
 

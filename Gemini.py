@@ -19,7 +19,7 @@ def initializeAI():
     }
 
     model = genai.GenerativeModel(
-      model_name="gemini-1.5-flash-8b",
+      model_name="gemini-1.5-pro",
       generation_config=generation_config,
       tools = [
         genai.protos.Tool(
