@@ -1,48 +1,76 @@
-#this is the file resposinble for the gemini 1.0 pro model
-import pathlib
-import textwrap
 import pre
-
 import google.generativeai as genai
+from google.ai.generativelanguage_v1beta.types import content
+import json
+from lights_cotrol import toggle_lights
 
 
-def initializeAI():#makes the conversation object such that the Ai remembers what the user said, and defined the model and it's settings
-	global convo
-	GOOGLE_API_KEY = pre.GOOGLE_API_KEY
-	genai.configure(api_key=GOOGLE_API_KEY)
-	generation_config = {
-	  "temperature": 0.9,
-	  "top_p": 1,
-	  "top_k": 1,
-	  "max_output_tokens": 2048,
-	}
+def initializeAI():
+    global chat_session
+    GOOGLE_API_KEY = pre.GOOGLE_API_KEY
+    genai.configure(api_key=GOOGLE_API_KEY)
 
-	safety_settings = [ #the safety settings
-	  {
-	    "category": "HARM_CATEGORY_HARASSMENT",
-	    "threshold": "BLOCK_ONLY_HIGH"
-	  },
-	  {
-	    "category": "HARM_CATEGORY_HATE_SPEECH",
-	    "threshold": "BLOCK_ONLY_HIGH"
-	  },
-	  {
-	    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-	    "threshold": "BLOCK_ONLY_HIGH"
-	  },
-	  {
-	    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-	    "threshold": "BLOCK_ONLY_HIGH"
-	  },
-	]
-	model = genai.GenerativeModel(model_name="gemini-1.0-pro",
-                              generation_config=generation_config,
-                              safety_settings=safety_settings)
-	convo = model.start_chat(history=[])
+    generation_config = {
+      "temperature": 1,
+      "top_p": 0.95,
+      "top_k": 40,
+      "max_output_tokens": 8192,
+      "response_mime_type": "text/plain",
+    }
+
+    model = genai.GenerativeModel(
+      model_name="gemini-1.5-flash-8b",
+      generation_config=generation_config,
+      tools = [
+        genai.protos.Tool(
+          function_declarations = [
+            genai.protos.FunctionDeclaration(
+              name = "toggle_light",
+              description = "Toggles the state of the lights (ON/OFF)",
+              parameters = content.Schema(
+                type = content.Type.OBJECT,
+                enum = [],
+                required = ["state"],
+                properties = {
+                  "state": content.Schema(
+                    type = content.Type.STRING,
+                  ),
+                },
+              ),
+            ),
+          ],
+        ),
+      ],
+    )
+
+    chat_session = model.start_chat(
+        history=[
+        ]
+    )
+
 
 def sendMessage(message): ##adds a new message to the conversation object, and formats the reply
-	#response = model.generate_content(message)
-	#processed_response = response.candidates[0].content.parts[0].text
-	convo.send_message(message)
-	processed_response = convo.last.text
-	return processed_response
+    response = chat_session.send_message(message)
+    proccessed_response = process_model_response(response)
+    return proccessed_response
+
+def check_if_function_call(response):
+    core = response.candidates[0].content.parts[0]
+    if 'text' in core:
+        return False
+    elif 'function_call' in str(core):
+        return True
+
+def process_model_response(response):
+
+    if check_if_function_call(response):
+        response = str(response.candidates[0].content.parts[0].function_call)
+        if 'ON' in response:
+            state = 'on'
+        elif 'OFF' in response:
+            state = 'off'
+        toggle_lights(state)
+        return f'Turning the lights {state}'
+    else:
+        return response.candidates[0].content.parts[0].text
+
